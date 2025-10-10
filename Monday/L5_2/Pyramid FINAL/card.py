@@ -7,8 +7,8 @@ class Card(pygame.sprite.Sprite):
         self.rank = rank
         self.suit = suit
         self.faceup = False
-        self.images = {True: pygame.image.load("images/{} {}.png".format(suit, rank)),
-                       False: pygame.image.load("images/Back Blue 1.png")}
+        self.images = {True: pygame.image.load("Pyramid FINAL/images/{} {}.png".format(suit, rank)),
+                       False: pygame.image.load("Pyramid FINAL/images/Back Blue 1.png")}
         self.image = self.images[self.faceup]
         self.rect = self.image.get_rect()
         self.rect.topleft = (20, 20)

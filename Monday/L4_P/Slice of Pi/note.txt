@@ -1,0 +1,20 @@
+Welcome!
+
+1) How is this website made?
+a) HTML
+--> heading (title, slogan, top of box texts)
+--> inputs (size, crust, sauce, toppings, etc)
+--> paragraphs
+--> place order button
+
+b) CSS
+--> boxes
+----> investigate how we made them all look the same
+- divs, classes
+--> margins, background colours, border, text colour, padding, centred text
+
+2) What is the functionaltiy of this website? How could we make that happen?
+--> Javascript
+--> lets you order pizza
+----> when you press the submit button, the website generates an alert with the total cost based on your inputs
+--> setting a price for each input and then adding together at the end
