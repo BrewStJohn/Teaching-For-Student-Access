@@ -5,7 +5,16 @@
 // d) A link to a poster for the film/tv show
 // HINT: jQuery AJAX get
 
-// 4) Use jQuery to add a table to the brief view
+$(document).ready(function(){
+    $.get("https://www.omdbapi.com/?t=Harry+Potter+and+the+Sorcerer%27s+Stone&y=2001&apikey=af5dd467", function(data, status){
+        console.log(data.Plot);
+        console.log(status);
+        txt1 = $("<p></p>").text(data.Plot);
+        $("#brief-view").append(txt1);
+    });
+});
+
+// 4) Use jQuery to add table rows to the brief view
 // and, for every film/tv show, add an entry
 // to the table
 // BONUS: Use Bootstrap to decorate it

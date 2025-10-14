@@ -13,7 +13,6 @@ class Card(pygame.sprite.Sprite):
         self.image = pygame.image.load(f"Pyramid\\images\\{suite} {rank}.png")
         # d) Rect
         self.rect = self.image.get_rect()
-    
 
     # CHALLENGE: Create a method called 'flip' that
     # flips the card over so we see its back.

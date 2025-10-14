@@ -24,6 +24,7 @@ print(five_hearts.rect)
 
 king_diamonds = Card("13", "Diamond")
 king_diamonds.rect = (300, 300)
+print(king_diamonds.rank, king_diamonds.suite, king_diamonds.image)
 
 # 3) Design a Deck class
 # --> what properties and methods should a deck have?
