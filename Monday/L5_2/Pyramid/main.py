@@ -1,6 +1,7 @@
 # Example file showing a basic pygame "game loop"
-import pygame
+import pygame, random
 from card import Card
+from deck import Deck
 
 # pygame setup
 pygame.init()
@@ -15,12 +16,14 @@ running = True
 # ace_rect = ace_of_spades.get_rect()
 # ace_rect.center = (360, 240)
 
-
+deck = Deck()
+print(len(deck.cards))
+testCard = deck.cards[random.randint(0,51)]
 
 # 2e) Create an instance of this class in your main
 # game loop and draw it to the screen
-five_hearts = Card("5", "Hearts")
-print(five_hearts.rect)
+# five_hearts = Card("5", "Hearts")
+# print(five_hearts.rect)
 
 king_diamonds = Card("13", "Diamond")
 king_diamonds.rect = (300, 300)
@@ -41,8 +44,9 @@ while running:
 
     # RENDER YOUR GAME HERE
     # screen.blit(ace_of_spades, ace_rect)
-    screen.blit(five_hearts.image, five_hearts.rect)
+    # screen.blit(five_hearts.image, five_hearts.rect)
     screen.blit(king_diamonds.image, king_diamonds.rect)
+    screen.blit(testCard.image, testCard.rect)
 
 
     # flip() the display to put your work on screen

@@ -5,12 +5,37 @@
 // d) A link to a poster for the film/tv show
 // HINT: jQuery AJAX get
 
+
+// OPTION 1: Multiple queries
+// links = {
+//     "film1": "https://www.omdbapi.com/?t=Harry+Potter+and+the+Sorcerer%27s+Stone&y=2001&apikey=af5dd467"
+// }
+
+// links.forEach(getFilm)
+
+// function getFilm(link){
+//     $.get(link)
+// };
+
 $(document).ready(function(){
+
+    // OPTION 2: Make your query more querious
     $.get("https://www.omdbapi.com/?t=Harry+Potter+and+the+Sorcerer%27s+Stone&y=2001&apikey=af5dd467", function(data, status){
-        console.log(data.Plot);
+        console.log(data);
         console.log(status);
-        txt1 = $("<p></p>").text(data.Plot);
-        $("#brief-view").append(txt1);
+
+        poster = "<img src=\"" + data.Poster + "\"></img>";
+        title = data.Title;
+        year = data.Year;
+
+        tr = $("<tr></tr>")
+        tr.append("<td>" + poster + "</td>");
+        tr.append("<td>" + title + "</td>");
+        tr.append("<td>" + year + "</td>")
+        // tr.append("<td></td>").append(year);
+        // txt1 = $("<p></p>").text(data.Plot);
+        $("#brief-view > table > tbody").append(tr);
+
     });
 });
 
