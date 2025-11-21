@@ -37,4 +37,5 @@ function validate(){
 // https://www.w3schools.com/js/js_arrays.asp
 
 // 2) Programming:
-// Validate the user input (when the user checks more than one box, send an alert saying "dont do that")
+// Validate the user input (when the user checks more than one box, 
+// send an alert saying "dont do that")

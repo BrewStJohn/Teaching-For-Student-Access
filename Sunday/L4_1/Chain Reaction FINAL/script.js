@@ -82,7 +82,7 @@ function gameLoop() {
     }
 }
 
-setInterval(gameLoop, 10);
+setInterval(gameLoop, 1000);
 
 function makeExplosion(x,y) {
     exp = {
