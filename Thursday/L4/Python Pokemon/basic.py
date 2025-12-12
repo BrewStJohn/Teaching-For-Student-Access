@@ -24,7 +24,7 @@ def attackPokemon(name, myMoves, wildPokemon, enemyMoves):
     speed = random.random()
 
     if speed > 0.5:
-        print("{} moves quickly to attack first.".format(name))
+        print("{} moves quickly to attack first. \nActually, speed is completely luck based.".format(name))
         damage = random.randint(10, 45)
         enemyHP -= damage
         print("Your {} attack does {} damage.".format(myMove, damage))
