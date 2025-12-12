@@ -1,6 +1,5 @@
 import pygame
 
-
 class Card(pygame.sprite.Sprite):
     def __init__(self, rank, suit):
         super().__init__()

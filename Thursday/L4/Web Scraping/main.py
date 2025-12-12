@@ -2,25 +2,22 @@ import requests
 from bs4 import BeautifulSoup
 
 x = requests.get('http://quotes.toscrape.com/')
+#print(x.text)
 soup = BeautifulSoup(x.text, 'html.parser')
-#print(soup)
-print(soup.prettify())
 
-quotes = soup.find_all('div', class_="quote")
+#print(soup.prettify())
 
-if quotes:
-    print(f"Found {len(quotes)} quotes!\n")
+quotes = soup.find_all('div', "quote")
+print(f"Found {len(quotes)} quotes!\n")
 
-    # print("Found " + str(len(quotes)) + " quotes! ")
-    # print()
+# print("Found " + str(len(quotes)) + " quotes! ")
+# print()
 
-    for i, quote in enumerate(quotes):
-        text = quote.find("span", class_="text").text
-        author = quote.find("small", class_ = "author").text
-        print(f"Quote {i+1}: {text}")
-        print(f"   -{author}\n")
-else:
-    print("No quotes found")
+for i, quote in enumerate(quotes):
+    text = quote.find("span", class_="text")
+    author = quote.find("small", class_ = "author")
+    print(f"Quote {i+1}: {text}")
+    print(f"   -{author}\n")
 
 
 # INDEPENDANT TASKS:

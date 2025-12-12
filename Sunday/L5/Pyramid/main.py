@@ -8,8 +8,9 @@ screen = py.display.set_mode((1280, 720))
 clock = py.time.Clock()
 running = True
 
-new_card = Card(5, "Hearts") # this should create
-# a card
+new_card = Card(10, "Diamond") # this should create a card
+new_card.rect.center = (500, 500)
+# card_image = py.image.load("Pyramid/PNG/Medium/Spades 1.png")
 
 def process_events():
     global running
@@ -22,6 +23,7 @@ def main(): # run my game
         process_events()
 
         screen.fill("green")
+        screen.blit(new_card.image, new_card.rect)
         py.display.flip()
         clock.tick(60)
 

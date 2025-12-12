@@ -3,11 +3,7 @@ const ctx = canvas.getContext("2d");
 const balls = [];
 
 // 1: Draw a ball onto the canvas.
-ctx.beginPath();
-ctx.arc(95, 50, 10, 0, 2 * Math.PI)
-ctx.fillStyle = "black";
-ctx.fill();
-ctx.closePath();
+// IVE MOVED THIS CODE, YOULL HAVE TO START YOURSELF
 
 // 2) Next, we are going to setup the factory line
 // for creating multiple balls at a time
@@ -18,8 +14,8 @@ function buildBalls(number){
     // ^^^ store all of these balls in an array called 'balls'
     for (let i = 0; i < number; i++){
         const ball = {
-            x: 10,// random number
-            y: 10,// random number
+            x: Math.floor(Math.random()* canvas.width),
+            y: Math.floor(Math.random()* canvas.height),
             x_speed: 2,// random number
             y_speed: 2,// random number
             size: 10,
@@ -28,14 +24,47 @@ function buildBalls(number){
         balls.push(ball);
     }
 }
-// TO TEST: call build balls and look at the balls array. Does it have stuff in it?
+// TO TEST: call build balls and look at the balls array. 
+// Does it have stuff in it?
 buildBalls(10);
 console.log(balls);
 
-
 // 3) Create a function called 'drawObject' that takes in
-// a ball as a parameter and draws it to its x and y coordinate on
-// your canvas
+// a ball as a parameter 
+// and draws it to its x and y coordinate on your canvas
 
-// 4) For each ball object, move it along the screen based on its x
-// y speeds using the SetInterval window method
+// create function draw object with parameter ball
+function drawObject(ball){
+// --> The parameter ball is one of those balls i made in build balls 
+    // console.log(ball);
+    // take the steps from part 1 and draw the ball to the screen
+    // HOWEVER: when I make a ball, its x and y coordinates need
+    // to change! How do I do that? I take a look at the parameter
+    // ball. It has x and y coordinates!
+    ctx.beginPath();
+    ctx.arc(ball.x, ball.y, 10, 0, 2 * Math.PI)
+    ctx.fillStyle = "black";
+    ctx.fill();
+    ctx.closePath();
+}
+
+// 4) Create a function called 'drawBalls' that
+// For every ball in the balls array, draw that ball 
+// to the screen
+function drawBalls(){
+    // need to access the balls inside of the balls,
+    // specifically their x and y coordinates
+    for (let i = 0; i < balls.length; i++){
+        drawObject(balls[i]);
+    }
+}
+drawBalls();
+
+// 5) For each ball object, move it along the screen based 
+// on its x y speeds using the SetInterval window method
+
+// 6) Print to the consonle the coordinates on the canvas
+// of wherever you clicked. THIS IS GONNA BE HARD,
+// You will need to investigate more than just w3schools
+// HINTS: MouseEvents, Events, onclick,
+// offSetLeft & offSetRight
