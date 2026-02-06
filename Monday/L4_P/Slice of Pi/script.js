@@ -56,8 +56,8 @@ function buildOrder(){
 }
 
 function handleOrderClick(){
-    order = buildOrder();
-    console.log(order);
+    let sally = buildOrder();
+    console.log(sally);
     validate();
 }
 

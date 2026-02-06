@@ -20,7 +20,7 @@ var spawntime = 20;
 var count = 0;
 
 var roundMobs = Math.pow(2,level);
-setInterval(updateGame,100);
+setInterval(updateGame,50);
 
 
 function getDistance(x1,y1,x2,y2){

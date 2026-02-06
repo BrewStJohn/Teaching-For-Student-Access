@@ -1,0 +1,36 @@
+body {
+  font-family: monospace;
+  text-align: center;
+  background-color: lightBlue;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+canvas {
+  background-color: black;
+}
+
+table {
+  margin: 25px auto;
+  font-size: 20px;
+  border-style: solid;
+  border-collapse: collapse;
+}
+
+td {
+  border-style: solid;
+  padding: 15px;
+}
+
+td div {
+  display: inline-block;
+}
+
+button {
+  font-family: monospace;
+  font-size: 20px;
+  padding: 15px;
+  background-color: orange;
+}

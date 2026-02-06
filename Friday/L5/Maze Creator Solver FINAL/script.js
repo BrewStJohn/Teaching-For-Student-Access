@@ -24,7 +24,7 @@ var goal = null;
 initialize()
 
 // an interval is used to VISUALIZE the DFS algorithm's thinking
-var mazeInterval = setInterval(createMaze, 500);
+var mazeInterval = setInterval(createMaze, 1000);
 // ^ we can remove this interval because we dont need its thinking anymore
 
 // we can make a NEW interval to run a new function for our BFS SOLVER
@@ -126,7 +126,7 @@ function initialize(){
   goal = pickRandomPoint();
   // push into our queue a random point to start
   // make our goal/end point
-  console.log(pts);
+  // console.log(pts);
 }
 
 
@@ -182,7 +182,7 @@ created many times over. How can we create a function to do this?
 */
 
 function drawMaze(){
-  // ctx.clearRect(0,0,canvas.width,canvas.height);
+  ctx.clearRect(0,0,canvas.width,canvas.height);
   for(var i = 0;i<paths.length;i++){
     paths[i].draw();
   }
@@ -197,6 +197,7 @@ function createMaze(){
   // while (true){
     drawMaze();
     var uv = ptsStack[0].getUnvisited();
+    console.log(ptsStack);
     while (uv == false){
       // 'pop' the first item off the stack
       ptsStack.splice(0,1);
@@ -278,3 +279,9 @@ function drawSolution(){
 }
 
 
+// create stack
+// put first point on stack
+// select random neighbour
+// draw path to that neighbour
+// add that point onto the stack
+// 
