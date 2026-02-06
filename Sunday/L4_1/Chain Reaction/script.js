@@ -1,6 +1,9 @@
 const canvas = document.getElementById("myCanvas");
+const canvasLeft = canvas.offsetLeft + canvas.clientLeft;
+const canvasTop = canvas.offsetTop + canvas.clientTop;
 const ctx = canvas.getContext("2d");
 const balls = [];
+let explosion = {};
 
 // 1: Draw a ball onto the canvas.
 // IVE MOVED THIS CODE, YOULL HAVE TO START YOURSELF
@@ -27,7 +30,7 @@ function buildBalls(number){
 // TO TEST: call build balls and look at the balls array. 
 // Does it have stuff in it?
 buildBalls(10);
-console.log(balls);
+// console.log(balls);
 
 // 3) Create a function called 'drawObject' that takes in
 // a ball as a parameter 
@@ -54,17 +57,50 @@ function drawObject(ball){
 function drawBalls(){
     // need to access the balls inside of the balls,
     // specifically their x and y coordinates
+    
     for (let i = 0; i < balls.length; i++){
+        updateBall(balls[i]);
         drawObject(balls[i]);
     }
 }
-drawBalls();
+
+function drawExplosion(){
+    
+}
+
+function gameLoop(){
+    ctx.clearRect(0,0,canvas.width, canvas.height);
+
+    drawBalls();
+    drawExplosion();
+}
 
 // 5) For each ball object, move it along the screen based 
 // on its x y speeds using the SetInterval window method
 
-// 6) Print to the consonle the coordinates on the canvas
+function updateBall(ball){
+    ball.x += ball.x_speed;
+    ball.y += ball.y_speed;
+    // NEXT: REFLECT OFF WALLS!
+}
+
+setInterval(gameLoop, 1000);
+
+// 6) Print to the console the coordinates on the canvas
 // of wherever you clicked. THIS IS GONNA BE HARD,
-// You will need to investigate more than just w3schools
+// You will need to investigate more than just w3schools.
 // HINTS: MouseEvents, Events, onclick,
-// offSetLeft & offSetRight
+// offSetLeft & offSetRight. Maybe a good quality
+// google search will have your answer.
+
+canvas.addEventListener('click', function(event){
+    let x = event.pageX - canvasLeft;
+    let y = event.pageY - canvasTop;
+
+    console.log(x, y);
+    explosion.x = x;
+    explosion.y = y;
+
+    // NEXT: Create a circle where you click. Have it expand
+    // slowly over time.
+});
