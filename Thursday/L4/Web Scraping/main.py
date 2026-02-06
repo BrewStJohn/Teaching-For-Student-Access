@@ -1,6 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 
+print(hello)
+
 x = requests.get('http://quotes.toscrape.com/')
 #print(x.text)
 soup = BeautifulSoup(x.text, 'html.parser')
