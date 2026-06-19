@@ -4,8 +4,6 @@ Welcome! 👋
 
 This repository contains class examples, practice activities, starter files, and completed projects. You can look through the files on GitHub, download the whole repository, or clone it to your computer.
 
-> **Quick tip:** Your instructor will usually tell you the **day**, **class code**, and **lesson or project name** to open.
-
 ## Finding your class files
 
 The folders are generally organized like this:
@@ -23,19 +21,6 @@ Wednesday → L4_P → Python Battleship → main.py
 1. Open the folder for the day your class meets.
 2. Open your class or group folder.
 3. Open the lesson or project named by your instructor.
-
-Current class folders include:
-
-| Day | Class folders |
-| --- | --- |
-| Monday | `L4_P`, `L5` |
-| Wednesday | `L4_P` |
-| Thursday | `L4_2` |
-| Friday | `L5`, `L5_P` |
-| Saturday | `L5` |
-| Sunday | `L4_2`, `L5` |
-
-Some days also have an `Archives` folder. Archived files are older class materials and usually are not the files you need unless your instructor directs you there.
 
 Lesson folders may contain:
 
@@ -159,7 +144,7 @@ This keeps `git pull` simpler and gives you a clean original to return to if som
 
 ## Need help?
 
-Ask your instructor if:
+Ask if:
 
 - you do not know which day or class folder to use;
 - a required file appears to be missing;
