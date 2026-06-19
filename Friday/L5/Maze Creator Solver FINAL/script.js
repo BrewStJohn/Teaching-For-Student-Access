@@ -24,11 +24,11 @@ var goal = null;
 initialize()
 
 // an interval is used to VISUALIZE the DFS algorithm's thinking
-var mazeInterval = setInterval(createMaze, 1000);
+// var mazeInterval = setInterval(createMaze, 100);
 // ^ we can remove this interval because we dont need its thinking anymore
 
 // we can make a NEW interval to run a new function for our BFS SOLVER
-// var solve = setInterval(BFSsolver, 50);
+var solve = setInterval(BFSsolver, 50);
 
 //Constructor for a point object
 function Point(x, y) {
@@ -78,7 +78,7 @@ function initialize(){
     var row = [];
     for(var x = 0; x<gridSize; x++){
       row.push(new Point(x, y));
-      row[x].draw();
+      // row[x].draw();
       if(y>0){
         
         /**
@@ -114,7 +114,7 @@ function initialize(){
   // return pts[randomX][randomY];
   ptsStack.push(pickRandomPoint());
   ptsStack[0].visted = true;
-  // createMaze()
+  createMaze()
 
   // comment out draw maze to see points
   // drawMaze()
@@ -182,7 +182,7 @@ created many times over. How can we create a function to do this?
 */
 
 function drawMaze(){
-  ctx.clearRect(0,0,canvas.width,canvas.height);
+  // ctx.clearRect(0,0,canvas.width,canvas.height);
   for(var i = 0;i<paths.length;i++){
     paths[i].draw();
   }
@@ -194,10 +194,10 @@ function createMaze(){
   // --> run drawMaze (drawing our paths)
   // --> draw the point at the top of the stack (ptsStack)
   // --> call getUnvisited function (within our points) on the top point   and store the returned point
-  // while (true){
-    drawMaze();
+  while (true){
+    // drawMaze();
     var uv = ptsStack[0].getUnvisited();
-    console.log(ptsStack);
+    // console.log(ptsStack);
     while (uv == false){
       // 'pop' the first item off the stack
       ptsStack.splice(0,1);
@@ -205,6 +205,7 @@ function createMaze(){
       if (ptsStack.length == 0){
         // we have reached the end of our ptsStack, which means the maze           is made
         //clearInterval(mazeInterval);
+        // console.log('here')
         return;
     }
     uv = ptsStack[0].getUnvisited();
@@ -221,7 +222,7 @@ function createMaze(){
   // add a path between this point and the top of the stack
   // add that point to the paths array at the top of the stack and visa       vera
   // finally, push the new point onto the stack
-  // }
+  }
 }
 
 
@@ -229,12 +230,13 @@ function createMaze(){
 // Write down some ideas for how it should work (look at how createMaze works)
 
 function BFSsolver(){
+  // createMaze();
   drawMaze();
   goal.draw();
   start.draw();
   
   var pt = solveQueue.pop()
-  console.log(pt)
+  // console.log(pt)
   if (pt == goal){
     clearInterval(solver);
     drawSolution();

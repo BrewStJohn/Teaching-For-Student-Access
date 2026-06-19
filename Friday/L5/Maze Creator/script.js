@@ -7,7 +7,7 @@ const paths = [];
 const ptsStack = [];
 
 initialise();
-setInterval(drawMaze, 10);
+setInterval(drawMaze, 1);
 
 // 3) Create an object constructor for a Point.
 // It should contain the following:
@@ -25,11 +25,25 @@ function Point(x, y){
 
     this.checkUnvisited = function(){
         // for all of our neighors in our neighbors list
+        for(let i = this.neighbours.length-1; i >= 0; i--){
             // if one of them is visited
+            if(this.neighbours[i].visited){
                 // remove it from the list
+                this.neighbours.splice(i,1);
+                // i--;
+            }
+        }
 
-        // select a random unvisited neighbor (if there is any)
-        // if there is no random unvisited neighbor, return false
+        // if there are neighbors
+        if (this.neighbours.length > 0){
+            // return a random neighbour
+            let index = Math.floor(Math.random()*this.neighbours.length);
+            return this.neighbours[index];
+        } else{
+            // if there is no random unvisited neighbor, 
+            // return false
+            return false;
+        }
     }
 
     // Method: Draw
@@ -47,7 +61,7 @@ function initialise(){
         const row = [];
         for (let j = 0; j < 60; j++){
             let newPoint = new Point(j,i);
-            newPoint.draw();
+            // newPoint.draw();
 
             // 4b) Give your points a neighbours property, which
             // will be an array of points that are its neighbours.
@@ -76,7 +90,9 @@ function initialise(){
     let random_choice_column = Math.floor(Math.random()*60)
 
     // add random point to pointStack
-    ptsStack.push(grid[random_choice_row][random_choice_column]);
+    let firstPoint = grid[random_choice_row][random_choice_column];
+    firstPoint.visited = true;
+    ptsStack.push(firstPoint);
 }
 
 // 5) Create an object constructor for a Path 
@@ -113,9 +129,19 @@ function Path(p1, p2, color){
 function drawMaze(){
     let curr = ptsStack[0];
     // FUTURE: change from curr.neighbours[0] to curr.getUnvisited()
-    let next_point = curr.neighbours[Math.floor(Math.random()*4)];
+    let next_point = curr.checkUnvisited(); // EITHER: Neighbor OR False
+    // as long as the next point is False (no unvisited neighbors)
+    while(next_point == false){
+        // pop off top point (splice OR shift)
+        // set the next point to the new top of the pts stack
+        // check the new points neighbours
+        ptsStack.shift()
+        next_point= ptsStack[0].checkUnvisited()
+    }
+
+    next_point.visited = true;
     // drew path
-    let newPath = new Path(curr, next_point, "black");
+    let newPath = new Path(ptsStack[0], next_point, "black");
     newPath.draw();
     ptsStack.splice(0,0,next_point);
 }
