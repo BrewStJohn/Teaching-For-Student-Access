@@ -1,5 +1,6 @@
 # Example file showing a basic pygame "game loop"
 import pygame
+from ball import Ball
 
 # pygame setup
 pygame.init()
@@ -12,6 +13,8 @@ running = True
 # Copy Relative Path: Bubble Pop\images\sphere-05.png
 # --> be sure to download the images linked in the chat
 
+# How can we make more than one ball?
+ball1 = Ball("Bubble Pop\images\sphere-11.png")
 while running:
     # poll for events
     # pygame.QUIT event means the user clicked X to close your window
@@ -21,9 +24,9 @@ while running:
 
     # fill the screen with a color to wipe away anything from last frame
     screen.fill("purple")
-    print("drawing...")
 
     # RENDER YOUR GAME HERE
+    screen.blit(ball1.image, ball1.rect)
 
     # flip() the display to put your work on screen
     pygame.display.flip()

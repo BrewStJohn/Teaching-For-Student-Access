@@ -1,6 +1,5 @@
 import pygame
 # 2) Create a new sprite class called 'Ball'. 
-# allow along with the documentation. 
 # (GeeksforGeeks - sprites)
 # --> The idea here is to create a 
 # new visual for the balls!
@@ -14,9 +13,10 @@ class Ball(pygame.sprite.Sprite):
     def __init__(self, img_path):
         super().__init__()
         self.path = img_path
-        self.image = pygame.image.load(self.img_path)
+        self.image = pygame.image.load(self.path)
         self.rect = self.image.get_rect()
-
+        # How can we shrink the size of this image?
+        # HINT: transform
 
 # 3) Create rows and columns of the ball sprites at
 # the top. 

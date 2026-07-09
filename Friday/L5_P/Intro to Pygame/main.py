@@ -6,6 +6,8 @@ pygame.init()
 screen = pygame.display.set_mode((1280, 720))
 clock = pygame.time.Clock()
 running = True
+my_image = pygame.image.load("Intro to Pygame\\ball.png").convert_alpha()
+
 
 while running:
     # poll for events
@@ -18,7 +20,7 @@ while running:
     screen.fill("purple")
 
     # RENDER YOUR GAME HERE
-
+    screen.blit(my_image, (100,100))
     # flip() the display to put your work on screen
     pygame.display.flip()
 

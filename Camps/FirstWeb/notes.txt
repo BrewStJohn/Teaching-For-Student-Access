@@ -1,0 +1,7 @@
+AGENDA:
+
+1) Vocab terms: DOM, Selector
+2) Debugging in Javascript
+3) Independent Programming with Guidance
+4) Demo with Parents
+5) Wrap it up

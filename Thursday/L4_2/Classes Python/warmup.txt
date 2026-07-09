@@ -1,0 +1,52 @@
+EXERCISE:
+0) Where do we find info about classes in Python?
+- w3schools
+- google
+- ai assistance
+
+1) Vocabulary
+https://www.w3schools.com/python/python_arguments.asp
+parameter: 
+- a placeholder (variable) you can use in a function
+i.e. def ...(name) <-- parameter
+...("Dylan") <-- argument
+
+property: 
+- what "its" (object) about
+- information about an object
+access an objects property:
+- myCircle = [codesters.circle(x,y,...)] object
+- myCircle.y
+- object.property
+
+method: 
+- function that belongs to a class
+- behaviour of objects / find information about an object
+access an objects method:
+- object.method("Dylan")
+
+class: "blueprint" for creating objects, object constructor
+
+2) Guided Practice
+Create a class called Card
+
+Add an __init__ method with rank and suite as 
+parameters. 
+Store them as properties.
+
+Add a method called print_card 
+that prints out the rank and suite of the card
+
+Create an object r1 with rank 5 and suite Spades
+
+Print the rank and suite of that card
+using the print_card method
+
+3) Independent Programming:
+Create a class called Deck
+
+Add an __init__ method. This class will have only 1
+property called cards, a list that contains Cards.
+
+Add a method called print_deck that prints out
+the rank and suite of the all the cards in the deck
