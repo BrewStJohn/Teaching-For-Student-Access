@@ -4,16 +4,16 @@ properties:
 method: 
 object: 
 class: 
+return statement:
 
 2) TASK
-Create a class called Rectangle
+Create a class called Card
 
-Add an __init__ method with width and height 
-store them as properties
+Add an init method with two parameters, rank and suite.
+This class should have two properties, rank and suite.
 
-Add a method called area that returns the width 
-multiplied by the height
+Then, create a method called print card. When called,
+it should return the cards name and rank
 
-Create an object r1 with width 5 and height 3
+i.e. '5 of Hearts' or 'Jack of Spades'
 
-Print the area of r1

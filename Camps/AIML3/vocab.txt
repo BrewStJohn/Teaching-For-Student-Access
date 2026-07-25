@@ -1,0 +1,91 @@
+DA VOCABULARY:
+1) Data Analysis:
+- Looking at data and inspecting/cleaning it to
+model it
+- The process of creating a story using data
+--> transforming a dataset into something that means
+something
+2) Data Visualisation:
+- A part of Data Analysis
+- Looking at data to find patterns
+- It can quickly convey the meaning of data
+4) Pandas:
+- Python library used to edit/organise data
+- cleaning data
+- loading/retrieving data
+- First step in DA
+5) Dataframe v.s. Series:
+- Like arrays
+- Dataframe: 2D Array
+- Series: 1D Array
+- Are all a part of Pandas
+6) Numpy:
+- Arrays
+- larger data 
+- Linear Algebra
+- Python Library for storing information in
+more mathematically efficient arrays. Can do
+Linear Algebra transformations on these arrays
+7) Matplotlib:
+- Plotting Data
+- Making data visualisations
+8) Module: 
+- file containing Python code
+- can import into any python file
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+AIML VOCABULARY:
+0) Machine Learning
+- Subsection of AI
+- Creates algorithms from data (inputs + outputs)
+- Training an AI, Classification
+1) Neural Network
+- Model made of nodes that have weights
+- layers
+--> input, hidden, output
+--> hidden layer: Developing an algorithm that leads from an input to an output
+--> output layer: where outputs are stored
+--> input layer: where inputs are accepted
+2) Perceptron:
+- A node in a neural network
+- It has a weight and connections to other nodes from other layers
+- Nodes have values (binary value of 1 or 0)
+- Building blocks for neural network
+3) Activation Function:
+- Every perceptron after the input (output layer)
+- tells nodes when to fire
+- makes the neural network non-linear
+4) Types of Networks
+- Recurrent:
+--> Reference past inputs. Used in text generation, text prediction, voice recognition
+- Convulational:
+--> Used in image analysis, video analysis
+--> Break down the image into features
+- Deep:
+--> Has more hidden layers. Used for more complex data. 
+- Feed-Forward
+--> Most basic type
+5) Tensorflow:
+- Library used in machine-learning / deep-learning
+6) Keras
+- API used to help write deep-learning neural networks from Tensorflow (provides useful templates)
+

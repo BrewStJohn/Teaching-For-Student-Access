@@ -1,0 +1,17 @@
+5) CHALLENGE:
+
+board = [
+    ["R", "G", "B", "Y", "P", "R"],
+    ["G", "R", "G", "B", "Y", "G"],
+    ["B", "G", "R", "R", "P", "Y"],
+    ["Y", "B", "G", "P", "R", "B"],
+    ["P", "Y", "R", "G", "B", "P"],
+    ["R", "P", "Y", "B", "G", "R"]
+]
+
+- Given a row and column, write code that checks
+all 8 neighbor cells to check to see if at least one
+of the balls has the same color as the ball stored
+at the row and column given earlier. If so, 
+repeat this process for all the balls it finds.
+HINT: Recursion

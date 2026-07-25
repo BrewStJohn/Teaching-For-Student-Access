@@ -24,6 +24,3 @@ class Person:
 
     def introduce_pet(self):
         return "My dog is " + self.pet.name
-
-
-number = 5

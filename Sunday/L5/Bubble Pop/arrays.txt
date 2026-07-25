@@ -1,0 +1,26 @@
+WARMUP:
+grid = [
+    [5, 2, 8],
+    [1, 9, 4],
+    [7, 6, 3]
+];
+
+Make a new Python file in your project
+called 'warmup.py'.
+1) print the number in the middle of the grid
+2) print every number in the second row
+3) print out the entire grid
+4) Create an algorith for finding the largest number 
+in the grid, then print it
+
+# More Advanced
+5) Create a function called 'increase' that increases each
+value in the array by 1.
+6) Create a function called 'add_value' with parameter 'value'
+that adds said value to the 2D array. 
+7) Create a function called 'detect_neighbours' that goes 
+each value in the 2D Array. If a neighbour has the value
+'m', change the value of the cell to 0 + how many neighbours
+it has.
+neighbour: an entry in the 2D Array that is 1 column
+above or below OR 1 row above or below OR diagonals.

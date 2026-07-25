@@ -24,9 +24,7 @@ class Card(pygame.sprite.Sprite):
     # CHALLENGE: Create a method called 'flip'
     # that flips the card over to its backside.
 
-
 # TASK 1: Create cards so they form a pyramid
-
 # TASK 2: Create a new class called Deck
 # This class should have 1 property called 
 # 'cards' that is a list of 52 Cards.
@@ -34,6 +32,8 @@ class Card(pygame.sprite.Sprite):
 # cards_list = []
 # for i in range(20):
 #     cards_list.append(Card())
+
+# CHALLENGE: Put this class into its own module
 
 while running:
     # poll for events

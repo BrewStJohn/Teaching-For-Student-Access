@@ -8,7 +8,6 @@ clock = pygame.time.Clock()
 running = True
 my_image = pygame.image.load("Intro to Pygame\\ball.png").convert_alpha()
 
-
 while running:
     # poll for events
     # pygame.QUIT event means the user clicked X to close your window

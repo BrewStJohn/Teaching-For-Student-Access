@@ -10,11 +10,13 @@ import pygame
 # from another class
 # --> parent (base) class, child (derived) class
 class Ball(pygame.sprite.Sprite):
-    def __init__(self, img_path):
+    def __init__(self, pos, img_path):
         super().__init__()
         self.path = img_path
         self.image = pygame.image.load(self.path)
+        self.image = pygame.transform.smoothscale(self.image, (34, 34))
         self.rect = self.image.get_rect()
+        self.rect.topleft = pos
         # How can we shrink the size of this image?
         # HINT: transform
 

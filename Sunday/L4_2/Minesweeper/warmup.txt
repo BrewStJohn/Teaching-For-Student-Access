@@ -1,0 +1,33 @@
+WARMUP:
+let grid = [
+    [5, 2, 8],
+    [1, 9, 4],
+    [7, 6, 3]
+];
+
+Make a new javascript file in your project
+called 'warmup.js'. Make sure to link it
+using the script tag!
+
+Try these tasks out in any order. Just practice using 2D Arrays!
+1) print the number in the middle of the grid
+2) print every number in the second row
+3) print out the entire grid
+4) find the largest number in the grid and print it
+5) Create a function that takes in a parameter
+for how many mines you want to place. Then,
+Place mines labelled 'M' in random places 
+in the grid.
+
+# More Advanced
+6) Create a function called 'increase' that increases each
+value in the array by 1.
+7) Create a function called 'add_value' with parameter 'value'
+that adds said value to the 2D array. 
+How do you think this should be implemented?
+8) Create a function called 'detect_neighbours' that goes 
+each value in the 2D Array. If a neighbour has the value
+'m', change the value of the cell to 0 + how many neighbours
+it has.
+neighbour: an entry in the 2D Array that is 1 column
+above or below OR 1 row above or below OR diagonals.

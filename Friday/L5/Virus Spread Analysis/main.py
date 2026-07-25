@@ -85,7 +85,8 @@ class Virus(pygame.sprite.Sprite):
 def main():
     # Game loop
     global running
-    viruses.add(Virus((300,300),5))
+    virus1 = Virus((300,300),5)
+    viruses.add(virus1)
     while running:
 
         clock.tick(60)
@@ -115,7 +116,7 @@ def main():
         # If the round isn't over,
         # testVirus.update()
         screen.blit(text, text_rect)
-        # screen.blit(testVirus.image, testVirus.rect)
+        screen.blit(virus1.image, virus1.rect)
         viruses.update()
         viruses.draw(screen)
 
