@@ -24,3 +24,12 @@ setInterval(updateGame,30);
 
 // 3) Create a class/object constructor 
 // for a Ball
+
+// CALCULATING SPEED (diagonal paths):
+// 1) Where are we starting, where are we ending
+// --> have a 2D Array filled with coordinates of 
+// where the enemies will make turns
+// 2) Find length of vector (find the value of c)
+// 3) Find unit vector (distance between points --> x2 - x1
+// divided by length of the vector)
+// 4) Multiply by how fast you want it to go (speed)
