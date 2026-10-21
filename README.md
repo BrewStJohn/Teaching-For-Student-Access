@@ -154,4 +154,10 @@ Ask if:
 
 When asking for help, include the folder you opened and the complete error message. A screenshot can also be useful.
 
+## Maintainer documentation
+
+See the [teaching collection improvement roadmap](docs/IMPROVEMENT_ROADMAP.md) for
+prioritized ideas covering example reliability, lesson documentation, credentials,
+duplicate materials, verification, and repository maintenance.
+
 Happy coding! 🚀
